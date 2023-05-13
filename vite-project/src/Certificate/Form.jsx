@@ -1,5 +1,6 @@
 import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 
+// eslint-disable-next-line react/prop-types
 const Certificate = ({ name }) => {
   const styles = StyleSheet.create({
     page: {
@@ -27,7 +28,9 @@ const Certificate = ({ name }) => {
     <Document>
       <Page size="A4" style={styles.page}>
         <View style={styles.section}>
-          <Text style={styles.title}>Certificate of Completion</Text>
+          <Text style={styles.title}>
+            Certificate of Completion of Our Master Class
+          </Text>
           <Text style={styles.subtitle}>This certificate is awarded to:</Text>
           <Text style={{ fontSize: 24, textAlign: "center", marginTop: 20 }}>
             {name}
